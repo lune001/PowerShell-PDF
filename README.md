@@ -7,7 +7,7 @@ Download the files here then run `.\kittens-report.ps1` to make a custom report 
 ### Example
 This will create a PDF showing running processes:
 
-    Add-Type -Path “.\itextsharp.dll”
+    Add-Type -Path ".\itextsharp.dll"
     Import-Module ".\PDF.psm1"
     
     $pdf = New-Object iTextSharp.text.Document
