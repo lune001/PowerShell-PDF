@@ -2,7 +2,7 @@
 Creating PDF reports in PowerShell
 
 ### Installation
-Download the files here then run `.\make-report.ps1` to make a custom report (`kittens-report.pdf`). Edit the script to customize your PDF.
+Download the files here then run `.\kittens-report.ps1` to make a custom report (`kittens-report.pdf`). Edit the script to customize your PDF.
 
 ### Example
 This will create a PDF showing running processes:
