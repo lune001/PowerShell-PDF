@@ -11,7 +11,7 @@ This will create a PDF showing running processes:
     Import-Module ".\PDF.psm1"
     
     $pdf = New-Object iTextSharp.text.Document
-    Create-PDF -Document $pdf -File ".\processes-report.pdf" -TopMargin 20 -BottomMargin 20 -LeftMargin 20 -RightMargin 20 -Author "Patrick"
+    Create-PDF -Document $pdf -File "C:\processes-report.pdf" -TopMargin 20 -BottomMargin 20 -LeftMargin 20 -RightMargin 20 -Author "Patrick"
     $pdf.Open()
     Add-Title -Document $pdf -Text "Running processes at $(Get-Date)" -Centered
     $processes = @()
