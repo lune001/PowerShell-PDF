@@ -3,7 +3,7 @@
 #
 
 # Import assembly: iTextSharp is from: https://sourceforge.net/projects/itextsharp
-Add-Type -Path “$PSScriptRoot\itextsharp.dll”
+Add-Type -Path "$PSScriptRoot\itextsharp.dll"
 
 #
 # Function definitions
