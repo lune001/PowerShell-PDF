@@ -2,7 +2,11 @@
 Creating PDF reports in PowerShell
 
 ### Installation
-Download the files here then run `.\kittens-report.ps1` to make a custom report (`kittens-report.pdf`). Edit the script to customize your PDF.
+Download the files *PDF.psm1*, *iTextSharp.xml* and *iTextSharp.dll*. To create PDF files, you need to import the assembly, then import the PDF module. 
+
+A sample script is provided. Run `.\kittens-report.ps1` to make a custom report (`kittens-report.pdf`). Edit the script to customize your PDF.
+
+Note that you may need to right click on the files and select Properties -> Security -> Unblock if the assembly won't import.
 
 ### Example
 This will create a PDF showing running processes:
