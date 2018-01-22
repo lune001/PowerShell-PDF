@@ -50,15 +50,21 @@ function Add-Image([iTextSharp.text.Document]$Document, [string]$File, [int32]$S
 }
 
 # Add a table to the document with an array as the data, a number of columns, and optionally centered
+# with reduce font size and full width percentage
 function Add-Table([iTextSharp.text.Document]$Document, [string[]]$Dataset, [int32]$Cols = 3, [Switch]$Centered)
 {
     $t = New-Object iTextSharp.text.pdf.PDFPTable($Cols)
     $t.SpacingBefore = 5
     $t.SpacingAfter = 5
+	$t.widthpercentage = 100
+			
     if(!$Centered) { $t.HorizontalAlignment = 0 }
     foreach($data in $Dataset)
     {
-        $t.AddCell($data);
+	    $phrase = new-object iTextSharp.text.phrase
+		$phrase.Font = [iTextSharp.text.FontFactory]::GetFont("Arial", 8)
+		$phrase.add($data)
+	    $cell = new-object iTextSharp.text.pdf.PdfPCell($phrase)
+        $t.AddCell($cell);
     }
     $Document.Add($t)
-}
